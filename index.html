@@ -40,6 +40,11 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+
+    <link
+        rel="icon"
+        href="assets/images/logo.webp" 
+        type="image/x-icon">
 </head>
 
 <body>
@@ -80,7 +85,8 @@
 
             <div class="logo">
 
-                <span>Qualidrinks</span> Events
+                <img src="assets/images/logo.webp" alt="Logo">
+                <span>Qualidrinks Events</span>
 
             </div>
 
@@ -166,7 +172,7 @@
 
     <!-- ABOUT -->
 
-    <section id="about" class="about section">
+    <section id="about" class="about section reveal">
 
         <div class="container">
 
@@ -185,6 +191,7 @@
                     <img
                         src="assets/images/quad.jpeg"
                         alt="About Qualidrinks"
+                        loading="lazy"
                     />
 
                 </div>
@@ -254,23 +261,15 @@
 
                 <div class="stat-card">
 
-                    <h2 class="counter" data-target="25">0</h2>
+                    <h2 class="counter">25+</h2>
 
                     <p>Events Managed</p>
 
                 </div>
 
-                <div class="stat-card">
+                    <div class="stat-card">
 
-                    <h2 class="counter" data-target="100">0</h2>
-
-                    <p>Client Satisfaction %</p>
-
-                </div>
-
-                <div class="stat-card">
-
-                    <h2 class="counter" data-target="1000">0</h2>
+                    <h2 class="counter">7000+</h2>
 
                     <p>Guests Served</p>
 
@@ -278,7 +277,15 @@
 
                 <div class="stat-card">
 
-                    <h2 class="counter" data-target="24">0</h2>
+                    <h2 class="counter">100%</h2>
+
+                    <p>Client Satisfaction</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h2 class="counter">24/7</h2>
 
                     <p>Support Availability</p>
 
@@ -292,7 +299,7 @@
 
     <!-- SERVICES -->
 
-    <section id="services" class="services section">
+    <section id="services" class="services section reveal">
 
         <div class="container">
 
@@ -418,17 +425,17 @@
 
             <div class="gallery">
 
-                <img src="assets/images/webpec2.png" alt="Event">
+                <img src="assets/images/webpec2.png" alt="Event" loading="lazy">
 
-                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed" alt="Wedding">
+                <img src="assets/images/name1.jpg" alt="Wedding" loading="lazy">
 
-                <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf" alt="Party">
+                <img src="assets/images/name2.jpg" alt="Party" loading="lazy">
 
-                <img src="assets/images/webpec3.png" alt="Guests">
+                <img src="assets/images/webpec3.png" alt="Guests" loading="lazy">
 
-                <img src="assets/images/webpec1.png" alt="Celebration">
+                <img src="assets/images/webpec1.png" alt="Celebration" loading="lazy">
 
-                <img src="assets/images/fourth.png" alt="Drinks">
+                <img src="assets/images/fourth.png" alt="Drinks" loading="lazy">
 
             </div>
 
@@ -645,13 +652,13 @@
 
                 <form class="contact-form">
 
-                    <input type="text" placeholder="Full Name" id="name">
+                    <input type="text" placeholder="Full Name" id="name" required>
 
-                    <input type="email" placeholder="Email Address" id="email">
+                    <input type="email" placeholder="Email Address" id="email" required>
 
-                    <input type="tel" placeholder="Phone Number" id="phone">
+                    <input type="tel" placeholder="Phone Number" id="phone" required>
 
-                    <input type="text" placeholder="Event Type" id="eventType">
+                    <input type="text" placeholder="Event Type" id="eventType" required>
 
                     <input type="number" name="" id="guestNumber" placeholder="Number Of Guests">
 
@@ -692,7 +699,13 @@
                 &copy; 2026 Qualidrinks Events.
                 All Rights Reserved.<br>
                 <br>
-                Website designed and developed by O'Neil
+                Website designed and developed by 
+                <a 
+                href="https://github.com/oneilonyeka-netizen"
+                target="_blank"
+                rel="noopener"
+                >O'Neil
+                </a>
 
             </p>
 

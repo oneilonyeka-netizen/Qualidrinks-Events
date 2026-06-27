@@ -3,7 +3,7 @@
    PREMIUM WEBSITE JAVASCRIPT
 ===================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+
 
     /* ==========================================
        PRELOADER
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const preloader = document.getElementById("preloader");
 
-    window.addEventListener("load", () => {
+    document.addEventListener("DOMContentLoaded", () => {
 
         setTimeout(() => {
 
@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 preloader.style.display = "none";
-            }, 800);
+            }, 500);
 
-        }, 1200);
+        }, 1000);
 
     });
 
@@ -101,61 +101,61 @@ document.addEventListener("DOMContentLoaded", () => {
        COUNTER ANIMATION
     ========================================== */
 
-    const counters = document.querySelectorAll(".counter");
+    // const counters = document.querySelectorAll(".counter");
 
-    const startCounter = counter => {
+    // const startCounter = counter => {
 
-        const target = Number(counter.dataset.target);
+    //     const target = Number(counter.dataset.target);
 
-        let count = 0;
+    //     let count = 0;
 
-        const speed = target / 100;
+    //     const speed = target / 100;
 
-        const updateCounter = () => {
+    //     const updateCounter = () => {
 
-            count += speed;
+    //         count += speed;
 
-            if (count < target) {
+    //         if (count < target) {
 
-                counter.innerText = Math.floor(count);
+    //             counter.innerText = Math.floor(count);
 
-                requestAnimationFrame(updateCounter);
+    //             requestAnimationFrame(updateCounter);
 
-            } else {
+    //         } else {
 
-                counter.innerText = target;
+    //             counter.innerText = target;
 
-            }
+    //         }
 
-        };
+    //     };
 
-        updateCounter();
+    //     updateCounter();
 
-    };
+    // };
 
-    let counterStarted = false;
+    // let counterStarted = false;
 
-    const runCounters = () => {
+    // const runCounters = () => {
 
-        const statsSection = document.querySelector(".stats");
+    //     const statsSection = document.querySelector(".stats");
 
-        if (!statsSection) return;
+    //     if (!statsSection) return;
 
-        const position = statsSection.getBoundingClientRect().top;
+    //     const position = statsSection.getBoundingClientRect().top;
 
-        if (position < window.innerHeight && !counterStarted) {
+    //     if (position < window.innerHeight && !counterStarted) {
 
-            counters.forEach(startCounter);
+    //         counters.forEach(startCounter);
 
-            counterStarted = true;
+    //         counterStarted = true;
 
-        }
+    //     }
 
-    };
+    // };
 
-    window.addEventListener("scroll", runCounters);
+    // window.addEventListener("scroll", runCounters);
 
-    runCounters();
+    // runCounters();
 
     /* ==========================================
        FAQ ACCORDION
@@ -253,16 +253,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+
+    if (backToTop) {
+
     backToTop.addEventListener("click", () => {
 
         window.scrollTo({
-
             top: 0,
             behavior: "smooth"
-
         });
 
     });
+
+}
 
     /* ==========================================
        LIGHTBOX GALLERY
@@ -349,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
             %0ADescription: ${explan}`;
 
             window.open(
-                `https://wa.me/2349042983124?text=${message}`,
+                `https://wa.me/2349042983124?text=${encodeURIComponent(message)}`,
                 '_blank'
             );
          
@@ -413,62 +416,62 @@ document.addEventListener("DOMContentLoaded", () => {
        PARALLAX HERO EFFECT
     ========================================== */
 
-    const hero = document.querySelector(".hero");
+    // const hero = document.querySelector(".hero");
 
-    window.addEventListener("scroll", () => {
+    // window.addEventListener("scroll", () => {
 
-        const scrollValue = window.scrollY;
+    //     const scrollValue = window.scrollY;
 
-        if (hero) {
+    //     if (hero) {
 
-            hero.style.backgroundPositionY =
-                scrollValue * 0.4 + "px";
+    //         hero.style.backgroundPositionY =
+    //             scrollValue * 0.4 + "px";
 
-        }
+    //     }
 
-    });
+    // });
 
     /* ==========================================
        FLOATING EFFECT FOR SERVICE CARDS
     ========================================== */
 
-    const cards =
-        document.querySelectorAll(".service-card");
+    // const cards =
+    //     document.querySelectorAll(".service-card");
 
-    cards.forEach((card, index) => {
+    // cards.forEach((card, index) => {
 
-        card.style.animation =
-            `floatCard ${3 + index * 0.2}s ease-in-out infinite`;
+    //     card.style.animation =
+    //         `floatCard ${3 + index * 0.2}s ease-in-out infinite`;
 
-    });
+    // });
 
-});
+//});
 
 /* ==========================================
    FLOATING CARD KEYFRAME
 ========================================== */
 
-const style = document.createElement("style");
+// const style = document.createElement("style");
 
-style.innerHTML = `
-@keyframes floatCard {
+// style.innerHTML = `
+// @keyframes floatCard {
 
-    0% {
-        transform: translateY(0px);
-    }
+//     0% {
+//         transform: translateY(0px);
+//     }
 
-    50% {
-        transform: translateY(-8px);
-    }
+//     50% {
+//         transform: translateY(-8px);
+//     }
 
-    100% {
-        transform: translateY(0px);
-    }
+//     100% {
+//         transform: translateY(0px);
+//     }
 
-}
-`;
+// }
+// `;
 
-document.head.appendChild(style);
+// document.head.appendChild(style);
 
 /* ==========================================
    CONSOLE BRANDING
